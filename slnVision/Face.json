@@ -1,0 +1,28 @@
+{
+  "description": {
+    "tags": [ "person", "man", "indoor" ],
+    "captions": [
+      {
+        "text": "a man wearing glasses",
+        "confidence": 0.49332907795906067
+      }
+    ]
+  },
+  "faces": [
+    {
+      "faceRectangle": {
+        "left": 217,
+        "top": 241,
+        "width": 287,
+        "height": 287
+      }
+    }
+  ],
+  "requestId": "1e4d074b-2c84-42e8-ae09-4ef8dda0bab0",
+  "metadata": {
+    "height": 698,
+    "width": 800,
+    "format": "Jpeg"
+  },
+  "modelVersion": "2021-05-01"
+}
