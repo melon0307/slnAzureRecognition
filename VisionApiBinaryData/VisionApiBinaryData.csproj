@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BA7E943-E166-4BE0-9BE6-EB357444908B}</ProjectGuid>
+    <ProjectGuid>{2D72F419-1E25-4EC4-AD83-2C237AB975B5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>slnVision</RootNamespace>
-    <AssemblyName>slnVision</AssemblyName>
+    <RootNamespace>VisionApiBinaryData</RootNamespace>
+    <AssemblyName>VisionApiBinaryData</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -70,7 +70,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Vision.json" />
+    <None Include="Landmark.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

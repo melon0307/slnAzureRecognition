@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "name": "building_",
+      "score": 0.1875,
+      "detail": {
+        "landmarks": [
+          {
+            "name": "Taipei 101",
+            "confidence": 0.9984069466590881
+          }
+        ]
+      }
+    },
+    {
+      "name": "building_street",
+      "score": 0.78125,
+      "detail": {
+        "landmarks": [
+          {
+            "name": "Taipei 101",
+            "confidence": 0.9984069466590881
+          }
+        ]
+      }
+    }
+  ],
+  "description": {
+    "tags": [ "sky", "outdoor", "building", "city", "skyscraper", "tower" ],
+    "captions": [
+      {
+        "text": "a tall building with a dome on top with Taipei 101 in the background",
+        "confidence": 0.414639413356781
+      }
+    ]
+  },
+  "requestId": "e7305c39-bfb7-4d54-ab17-bd38f868d15b",
+  "metadata": {
+    "height": 795,
+    "width": 415,
+    "format": "Jpeg"
+  },
+  "modelVersion": "2021-05-01"
+}

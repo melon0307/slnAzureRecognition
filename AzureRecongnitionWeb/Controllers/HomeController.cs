@@ -28,6 +28,31 @@ namespace AzureRecongnitionWeb.Controllers
             return View();
         }
 
+        public IActionResult VisionAnalysis()
+        {
+            return View();
+        }
+
+        public IActionResult VisionAnalysisBinaryData()
+        {
+            return View();
+        }
+
+        public IActionResult ActionSync()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> ActionAsync() // 同步
+        {
+            return View();
+        }
+
+        public IActionResult CustomVision()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

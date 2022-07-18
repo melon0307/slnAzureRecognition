@@ -1,0 +1,63 @@
+{
+  "tags": [
+    {
+      "name": "animal",
+      "confidence": 0.9964700937271118
+    },
+    {
+      "name": "mammal",
+      "confidence": 0.9940996766090393
+    },
+    {
+      "name": "grass",
+      "confidence": 0.9926029443740845
+    },
+    {
+      "name": "dog",
+      "confidence": 0.9858978986740112
+    },
+    {
+      "name": "pet",
+      "confidence": 0.9843347072601318
+    },
+    {
+      "name": "dog breed",
+      "confidence": 0.9833970069885254
+    },
+    {
+      "name": "outdoor",
+      "confidence": 0.9830591678619385
+    },
+    {
+      "name": "snout",
+      "confidence": 0.8992735743522644
+    },
+    {
+      "name": "welsh corgi",
+      "confidence": 0.8535338640213013
+    },
+    {
+      "name": "brown",
+      "confidence": 0.6955062747001648
+    },
+    {
+      "name": "corgi",
+      "confidence": 0.6937277317047119
+    },
+    {
+      "name": "looking",
+      "confidence": 0.5638123154640198
+    },
+    {
+      "name": "field",
+      "confidence": 0.5517140626907349
+    }
+  ],
+  "requestId": "8472b9a9-baff-4289-8696-b70ae0dbdde4",
+  "metadata": {
+    "height": 750,
+    "width": 1125,
+    "format": "Jpeg"
+  },
+  "modelVersion": "2021-05-01"
+}

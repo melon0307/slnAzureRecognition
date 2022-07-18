@@ -1,26 +1,25 @@
 ﻿<div class="container">
     <label class="control-label">網址:</label>
-    <input id="faceUrl" class="form-control" value="https://chico.ca.us/sites/main/files/imagecache/lightbox/main-images/dog_license.jpg" />
-    <img id="imgPreview" src="~/Images/no-user.jpg" style="max-width:800px;max-height:600px" />
+    <input id="imageUrl" class="form-control" value="https://chico.ca.us/sites/main/files/imagecache/lightbox/main-images/dog_license.jpg" />
+    <img id="imgPreview" src="~/Images/no-image.png" style="max-width:800px;max-height:600px" />
     <br />
-    <button class="btn btn-success" onclick="analyzeFace()">辨識</button>
+    <button class="btn btn-success" onclick="analyzeImage()">辨識</button>
 </div>
-
 @section Scripts{
     <script>
-        function analyzeFace() {
-            $("#imgPreview").attr("src", $("#faceUrl").val());
+        function analyzeImage() {
+            $("#imgPreview").attr("src", $("#imageUrl").val());
             //=================================================
             var params = {
                 // Request parameters
-                "visualFeatures": "Faces,Description",
+                "visualFeatures": "Tags",
                 //"details": "{string}",
                 "language": "en",
                 "model-version": "latest",
             };
 
             var dataimg = {
-                url: $("#faceUrl").val()
+                url: $("#imageUrl").val()
             };
 
             $.ajax({
@@ -32,13 +31,14 @@
                 },
                 type: "POST",
                 // Request body
-                data: JSON.stringify(dataimg)                
+                data: JSON.stringify(dataimg)
             })
                 .done(function (data) {
                     //alert(JSON.stringify(data));
-                    var text = data.description.captions[0].text;
-                    var confidence = data['description']['captions'][0]['confidence'];
-                    alert(`內容: ${text}, 信心指數: ${(confidence * 100).toFixed(2)}%`);
+                    var tag = data["tags"][0]["name"];
+                    var confidence = data["tags"][0]["confidence"];
+                    alert(`Tag: ${tag}, 信心指數: ${(confidence*100).toFixed(2)}%`)
+
                 })
                 .fail(function (err) {
                     alert(err.responseText);

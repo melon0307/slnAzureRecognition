@@ -1,0 +1,47 @@
+﻿<div class="container">
+    <label class="control-label">圖形檔案:</label>
+    <input id="imageFile" type="file" class="form-control" />
+    <img id="imgPreview" src="~/Images/no-image.png" style="max-width:800px;max-height:600px" />
+    <br />
+    <button class="btn btn-success" onclick="analyzeImage()">辨識</button>
+</div>
+@section Scripts{
+    <script>
+        document.querySelector("#imageFile").addEventListener("change", function () {
+            var reader = new FileReader();
+            reader.onload = function () {
+                arrayBuffer = this.result;
+                var arrayBufferView = new Uint8Array(arrayBuffer);
+                var blob = new Blob([arrayBufferView], { type: "image/jpg" }); // Blob: 大型二進位物件
+                var urlCreator = window.URL || window.webkitURL; // 為了不同的瀏覽器相容器
+                var url = urlCreator.createObjectURL(blob);
+                $("#imgPreview").attr("src", url);
+            };
+            reader.readAsArrayBuffer(this.files[0]);
+        }, false);
+
+        function analyzeImage() {
+            $.ajax({
+                url: "https://msit14103customvision-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/22a45b0f-9074-4a0a-a901-d1f6d9a90f11/classify/iterations/Iteration1/image",
+                beforeSend: function (xhrObj) {
+                    // Request headers
+                    xhrObj.setRequestHeader("Content-Type", "application/octet-stream");
+                    xhrObj.setRequestHeader("Prediction-Key", "6722d21ab6cd447f9fe225b569e826a1");
+                },
+                type: "POST",
+                processData: false,
+                // Request body
+                data: arrayBuffer
+            })
+                .done(function (data) {                    
+                    var tagName = data['predictions'][0]['tagName'];
+                    var probability = data.predictions[0].probability;
+                    alert(`內容: ${tagName}, 信心指數: ${(probability * 100).toFixed(2)}%`);
+                })
+                .fail(function (err) {
+                    alert(err.responseText);
+                });
+        }
+
+    </script>
+}
