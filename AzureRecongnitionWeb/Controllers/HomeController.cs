@@ -53,6 +53,16 @@ namespace AzureRecongnitionWeb.Controllers
             return View();
         }
 
+        public IActionResult LUIS()
+        {
+            return View();
+        }
+
+        //public IActionResult BOT()
+        //{
+        //    return View();
+        //}
+
         public IActionResult Privacy()
         {
             return View();

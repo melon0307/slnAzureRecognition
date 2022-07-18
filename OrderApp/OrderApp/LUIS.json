@@ -1,0 +1,11 @@
+{
+  "query": "©ÜÂÄ",
+  "prediction": {
+    "topIntent": "None",
+    "intents": {
+      "None": { "score": 0.47064224 },
+      "ÂIÀ\": { "score": 0.31466395 }
+    },
+    "entities": {}
+  }
+}
